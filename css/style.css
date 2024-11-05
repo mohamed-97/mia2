@@ -452,108 +452,158 @@ table {
 	transition-delay: 0.5s;
 }
 /* ==========================================================================Hero========================================================================== */
+
+/* Conteneur de l'image fixe */
+/* Arrière-plan fixe pour la section .hero */
+.background-fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/header-bg.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fixe l'image uniquement dans cette section */
+    z-index: -20; /* Place l'image derrière le contenu */
+}
+
 .hero {
-	background: url('../img/header-bg.jpg') right bottom no-repeat;
-	background-size: contain;
-	padding:110px 0 100px 0;
-	height:auto;
-	background-color: #FBFBFB;
+    position: relative;
+    padding: 110px 0 100px 0;
+    color: #FBFBFB;
+    overflow: hidden; /* Empêche l'image de sortir de la section */
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    .hero h3 {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 5px;
+    }
+
+    .scrollto {
+        padding: 30px 0;
+        width: 150px;
+    }
+
+    .scrollto p {
+        font-size: 14px;
+    }
+
+    .scrollto--arrow img {
+        width: 20px;
+        height: auto;
+    }
+}
+
+
+/* Style de la section hero */
+.hero {
+    background: url('../img/header-bg.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* L'image reste fixe uniquement dans cette section */
+    padding: 110px 0 100px 0;
+    color: #FBFBFB;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Taille du texte dans .hero pour les grands écrans */
 .hero h1 {
-	font-size: 120px;
-	letter-spacing: -8px;
-	margin: 0;
-	font-weight: 600;
-	line-height: 95px;
-	text-transform: uppercase;
+    font-size: 8vw; /* Utilisation des vw pour une mise à l’échelle fluide */
+    letter-spacing: -0.5vw;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
 }
-.hero h1 span {
-	color:#a1a9b0;
-	/* display:inline-block; */
-}
+
 .hero h3 {
-	font-size: 20px;
-	margin:0;
-	padding:0;
-	opacity:0.5;
-	color: #E04343;
-	letter-spacing: 18px;
-	line-height: 50px;
-	text-transform: uppercase;
+    font-size: 3vw;
+    opacity: 0.8;
+    color: #E04343;
+    letter-spacing: 1vw;
+    line-height: 1.5;
+    text-transform: uppercase;
 }
-.hero p {
-	letter-spacing:1px;
-	color:#fff;
-	font-size: 15px;
+
+/* Ajustements pour les petits écrans */
+/* Ajustements spécifiques pour les écrans ultra-petits (jusqu'à 400px) */
+@media (max-width: 400px) {
+    .hero {
+        padding: 50px 0 !important;
+    }
+
+    .hero h1 {
+        font-size: 8vw !important;
+        line-height: 1 !important;
+        letter-spacing: -0.2vw !important;
+    }
+
+    .hero h3 {
+        font-size: 2.5vw !important;
+        letter-spacing: 0.2vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .scrollto {
+        padding: 10px 0 !important;
+        width: 90px !important;
+    }
+
+    .scrollto p {
+        font-size: 10px !important;
+    }
+
+    .scrollto--arrow img {
+        width: 12px !important;
+        height: auto !important;
+    }
 }
-/* Boucing Arrow Animation */
-@keyframes arrowbounce {
-	from {
-		-webkit-transform:translateY(0);
-		-moz-transform:translateY(0);
-		transform:translateY(0);
-	}
-	to {
-		-webkit-transform:translateY(-20px);
-		-moz-transform:translateY(-20px);
-		transform:translateY(-20px);
-	}
+
+/* Ajustements spécifiques pour les écrans ultra-petits (jusqu'à 716px) */
+@media (max-width: 781px) {
+    .hero {
+        padding: 50px 0 !important;
+    }
+
+    .hero h1 {
+        font-size: 8vw !important;
+        line-height: 1 !important;
+        letter-spacing: -0.2vw !important;
+    }
+
+    .hero h3 {
+        font-size: 2.5vw !important;
+        letter-spacing: 0.2vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .scrollto {
+        padding: 10px 0 !important;
+        width: 90px !important;
+    }
+
+    .scrollto p {
+        font-size: 10px !important;
+    }
+
+    .scrollto--arrow img {
+        width: 12px !important;
+        height: auto !important;
+    }
 }
-@-moz-keyframes arrowbounce {
-	/* Firefox */ from {
-		-webkit-transform:translateY(0);
-		-moz-transform:translateY(0);
-		transform:translateY(0);
-	}
-	to {
-		-webkit-transform:translateY(-20px);
-		-moz-transform:translateY(-20px);
-		transform:translateY(-20px);
-	}
-}
-@-webkit-keyframes arrowbounce {
-	/* Safari and Chrome */ from {
-		-webkit-transform:translateY(0);
-		-moz-transform:translateY(0);
-		transform:translateY(0);
-	}
-	to {
-		-webkit-transform:translateY(-20px);
-		-moz-transform:translateY(-20px);
-		transform:translateY(-20px);
-	}
-}
-@-o-keyframes arrowbounce {
-	/* Opera */ from {
-		-webkit-transform:translateY(0);
-		-moz-transform:translateY(0);
-		transform:translateY(0);
-	}
-	to {
-		-webkit-transform:translateY(-20px);
-		-moz-transform:translateY(-20px);
-		transform:translateY(-20px);
-	}
-}
-.scrollto {
-	padding: 150px 0px 0px 0px;
-	display:block;
-	color:#FFF;
-	text-decoration:none;
-	width:200px;
-	margin:0 auto;
-	border-bottom: none;
-}
-.scrollto--arrow {
-	padding:10px;
-}
-.scrollto--arrow img {
-	animation:arrowbounce 1s alternate infinite;
-	-moz-animation:arrowbounce 1s alternate infinite;
-	/* Firefox */-webkit-animation:arrowbounce 1s alternate infinite;
-	/* Safari and Chrome */-o-animation: arrowbounce 1s alternate infinite;
-	/* Opera */
-}
+
+
+
 /* ==========================================================================Intro========================================================================== */
 .intro p {
 	margin:50px 0 0;
