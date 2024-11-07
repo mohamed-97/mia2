@@ -937,7 +937,7 @@ i.respons {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .section_pub1 h1 {
         font-size: 4em;
 		color: #ffcc00 !important; /* Couleur du texte avec !important */
@@ -945,7 +945,7 @@ i.respons {
 	font-family: 'Roboto', sans-serif !important; /* Réduire encore plus pour les très petits écrans */
     }
 	.section_pub1 h2 {
-        font-size: 3em;
+        font-size: 2em;
 		color: #ff298b !important; /* Couleur du texte avec !important */
     text-shadow: #312828 !important;
 	font-family: 'Roboto', sans-serif !important; /* Réduire encore plus pour les très petits écrans */
